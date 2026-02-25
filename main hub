@@ -143,3 +143,20 @@ local Window = Rayfield:CreateWindow({
     Duration = 6.5,
     Image = 4483362458,
  })
+ local playerTab = Window:CreateTab("Combat", "hand-fist")
+ local Section = playerTab:CreateSection("hitbox")
+
+local hit12 = Instance.new("TextButton")
+hit12.Size = UDim2.new(0.2, 0, 0.1, 0)
+hit12.Position = UDim2.new(0.5, 0, 0.0, 0)
+hit12.BackgroundColor3 = Color3.new(0, 0, 0)
+hit12.BorderColor3 = Color3.new(0, 0, 1)
+hit12.BorderSizePixel = 1
+hit12.Text = "hitbox big"
+hit12.BackgroundTransparency = 0 
+hit12.TextColor3 = Color3.new(255, 255, 255)
+hit12.Font = Enum.Font.Code
+hit12.Parent = sf
+hit12.MouseButton1Down:connect(function()
+_G.HeadSize = 50
+_G.Disabled = true
