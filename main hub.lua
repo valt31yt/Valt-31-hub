@@ -146,17 +146,12 @@ local Window = Rayfield:CreateWindow({
  local playerTab = Window:CreateTab("Combat", "hand-fist")
  local Section = playerTab:CreateSection("hitbox")
 
-local hit12 = Instance.new("TextButton")
-hit12.Size = UDim2.new(0.2, 0, 0.1, 0)
-hit12.Position = UDim2.new(0.5, 0, 0.0, 0)
-hit12.BackgroundColor3 = Color3.new(0, 0, 0)
-hit12.BorderColor3 = Color3.new(0, 0, 1)
-hit12.BorderSizePixel = 1
-hit12.Text = "hitbox big"
-hit12.BackgroundTransparency = 0 
-hit12.TextColor3 = Color3.new(255, 255, 255)
-hit12.Font = Enum.Font.Code
-hit12.Parent = sf
-hit12.MouseButton1Down:connect(function()
+local Toggle = visualsTab:CreateToggle({
+    Name = "Extend Hitbox",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
 _G.HeadSize = 50
 _G.Disabled = true
+    end,
+ })
