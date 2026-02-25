@@ -113,33 +113,6 @@ local Window = Rayfield:CreateWindow({
     end,
  })
 
-
- local Slider = visualsTab:CreateSlider({
-    Name = "Slider Example",
-    Range = {0, 1},
-    Increment = 1,
-    Suffix = "Transparency",
-    CurrentValue = 0,
-    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        getgenv().chams.fillTransparency = Value
-    end,
- })
-
-
- local Section = visualsTab:CreateSection("targethud")
-
-
- local Toggle = visualsTab:CreateToggle({
-    Name = "Target Hud",
-    CurrentValue = false,
-    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        getgenv().targethud.enabled = Value
-    end,
- })
-
-
  local playerTab = Window:CreateTab("Player", "crosshair")
 
  local Section = playerTab:CreateSection("valt31 sonic speed")
@@ -167,16 +140,6 @@ local Window = Rayfield:CreateWindow({
     end,
  })
 
-
- local Keybind = playerTab:CreateKeybind({
-    Name = "Activate valt31 sonic speed",
-    CurrentKeybind = "divide",
-    HoldToInteract = false,
-    Flag = "Keybind1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Keybind)
-        getgenv().speed.keybind = Keybind
-    end,
- })
 
  getgenv().speed = {
     enabled = false,       -- Enable or disable the speed boost
