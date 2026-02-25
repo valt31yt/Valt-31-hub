@@ -289,7 +289,7 @@ submitBtn.MouseButton1Click:Connect(function()
         screenGui:Destroy()
 
        
-        loadstring(game:HttpGet("https://pastebin.com/raw/MkF6ZyQH"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/valt31yt/Valt-31-hub/refs/heads/main/main%20hub"))()
     else
         status.Text = "Invalid Key"
         status.TextColor3 = Color3.fromRGB(255, 100, 100)
@@ -307,3 +307,4 @@ submitBtn.MouseButton1Click:Connect(function()
         TweenService:Create(mainFrame, TweenInfo.new(0.1), {Position = orig}):Play()
     end
 end)
+
